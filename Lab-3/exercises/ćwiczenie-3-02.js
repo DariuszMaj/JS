@@ -3,7 +3,11 @@
  */
 
 function* evenNumbers(n, m) {
-  for (let i = n % 2 == 0 ? n : n + 1; i <= m; i += 2) {
+  for (
+    let i = n % 2 == 0 ? n : (n + 1) % 2 === 0 ? n + 1 : Math.floor(n) + 1;
+    i <= m;
+    i += 2
+  ) {
     yield i;
   }
 }
